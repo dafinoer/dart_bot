@@ -9,7 +9,7 @@ build/
 
 # Directory created by dartdoc
 doc/api/
-.env*
+
 
 /Dockerfile
 /app.yaml
