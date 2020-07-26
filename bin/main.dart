@@ -13,9 +13,6 @@ abstract class TeleDartResource {
   TeleDartResource([this.teleDart]);
 }
 
-const url_heroku = 'https://dafbot.herokuapp.com/';
-
-
 void main() {
 
   load();
@@ -25,13 +22,12 @@ void main() {
   var teledart = TeleDart(Telegram(isProduction ? env['TOKEN_BOT_PRODUCTION'] : env['TOKEN_BOT_DEBUG']), Event());
 
   teledart.setupWebhook(
-    url_heroku, 
+    env['BASE_URL'],
     env['TOKEN_BOT_PRODUCTION'], 
-    io.File(""), 
-    io.File(""), 
+    io.File(''), 
+    io.File(''), 
     port: int.parse(env['TELEGRAM_BOT_PORT'])
     );
-
 
   teledart.start(webhook: true);
 
