@@ -9,7 +9,7 @@ environment:
 dependencies:
   teledart: ^0.0.39
   dio: ^3.0.9
-  equatable: ^1.1.1
+  equatable: ^1.2.0
   intl: ^0.16.1
   dotenv: ^2.0.0
   
